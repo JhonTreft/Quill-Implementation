@@ -1,0 +1,5 @@
+#pip install django-quill-editor
+
+install dependencia
+
+utilizar en el install apps equals

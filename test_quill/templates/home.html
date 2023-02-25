@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/base16/pop.min.css">
+  </head>
+  <body>
+
+    <style>
+       *{
+         background-color:white;
+       }
+    </style>
+  
+   {% for ed in editor%}
+  {{ed.content.html | safe}}
+{%endfor%}
+
+  <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+
+
+
+<form action="/add/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+  {{form.media}}
+  {{form.body}}
+  <input type="submit" name="" value="">
+</form>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
